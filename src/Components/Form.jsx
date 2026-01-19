@@ -27,7 +27,7 @@ const Form = () => {
     return (
         <section className='flex items-center justify-center w-full h-screen bg-blue-200'>
 
-                <h1>Registration From</h1>
+             
             <form onSubmit={handleSubmit} className='flex flex-col gap-4 p-10 shadow-2xl rounded-2xl shadow-black  '>
                 <input type="text" name='name' placeholder='Whats Your name' onChange={handleOnChange} className='border  border-black px-2 py-4 rounded-lg w-sm outline-none' />
                 <input type="number" name='age' placeholder='Whats Your age' onChange={handleOnChange} className='border  border-black px-2 py-4 rounded-lg w-sm outline-none' />
