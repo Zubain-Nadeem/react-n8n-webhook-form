@@ -59,8 +59,9 @@ const Form = () => {
                     onChange={handleOnChange}
                     className="border border-white px-2 py-4 rounded-lg w-sm outline-none placeholder:text-gray-400 text-white"
                 />
-                <select name="company-registration" className="border border-white pl-2 pr-4 py-4 rounded-lg w-sm outline-none bg-[#003049] text-white"
+                <select   onChange={handleOnChange} name="company-registration" className="border border-white pl-2 pr-4 py-4 rounded-lg w-sm outline-none bg-[#003049] text-white"
                 >
+                    <option value="Select">Select-Registration</option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                 </select>
