@@ -30,6 +30,7 @@ const Form = () => {
         } else {
             alert(result.message);
         }
+        e.target.reset()
     };
     return (
         <section className="flex flex-col gap-10 items-center justify-center w-full h-screen bg-linear-to-tr from-[#003049] to [#fdf0d5]">
