@@ -13,7 +13,7 @@ const Form = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch(
+         await fetch(
             "https://zubaind5.app.n8n.cloud/webhook/User-Form",
             {
                 method: "POST",
@@ -24,12 +24,12 @@ const Form = () => {
             },
         );
 
-        const result = await response.json();
-        if (result.status === "success") {
-            alert(result.message);
-        } else {
-            alert(result.message);
-        }
+        // const result = await response.json();
+        // if (result.status === "success") {
+        //     alert(result.message);
+        // } else {
+        //     alert(result.message);
+        // }
     };
     return (
         <section className="flex flex-col gap-10 items-center justify-center w-full h-screen bg-linear-to-tr from-[#003049] to [#fdf0d5]">
