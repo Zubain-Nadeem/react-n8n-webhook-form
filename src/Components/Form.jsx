@@ -13,8 +13,8 @@ const Form = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-         await fetch(
-            "https://zubaind5.app.n8n.cloud/webhook/User-Form",
+       const response =  await fetch(
+            "https://zubaind5.app.n8n.cloud/webhook-test/User-Form",
             {
                 method: "POST",
                 headers: {
@@ -24,12 +24,12 @@ const Form = () => {
             },
         );
 
-        // const result = await response.json();
-        // if (result.status === "success") {
-        //     alert(result.message);
-        // } else {
-        //     alert(result.message);
-        // }
+        const result = await response.json();
+        if (result.status === "success") {
+            alert(result.message);
+        } else {
+            alert(result.message);
+        }
     };
     return (
         <section className="flex flex-col gap-10 items-center justify-center w-full h-screen bg-linear-to-tr from-[#003049] to [#fdf0d5]">
@@ -46,8 +46,8 @@ const Form = () => {
                     className="border  border-white px-2 py-4 rounded-lg w-sm outline-none placeholder:text-gray-400 text-white"
                 />
                 <input
-                    type="number"
-                    name="age"
+                    type="text"
+                    name="Employ-Info"
                     placeholder="Employs (e.g : 11 to 20)"
                     onChange={handleOnChange}
                     className="border  border-white px-2 py-4 rounded-lg w-sm outline-none placeholder:text-gray-400 text-white "
