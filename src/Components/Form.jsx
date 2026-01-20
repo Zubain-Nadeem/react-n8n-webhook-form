@@ -14,7 +14,7 @@ const Form = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
        const response =  await fetch(
-            "https://zubaind5.app.n8n.cloud/webhook-test/User-Form",
+            "https://zubaind5.app.n8n.cloud/webhook/User-Form",
             {
                 method: "POST",
                 headers: {
