@@ -14,7 +14,7 @@ const Form = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        await fetch('https://zubaind5.app.n8n.cloud/webhook/User-Form' , {
+       const response = await fetch('https://zubaind5.app.n8n.cloud/webhook/User-Form' , {
             method : 'POST',
             headers : {
                 "Content-Type" : "application/json"
@@ -22,7 +22,13 @@ const Form = () => {
             body : JSON.stringify(form)
         });
 
-        alert('Form Submitted')
+        const result = await response.json();
+        if(result.status === "success"){
+            alert(result.message)
+        }
+        else{
+            result.message
+        }
     }
     return (
         <section className='flex items-center justify-center w-full h-screen bg-blue-200'>
