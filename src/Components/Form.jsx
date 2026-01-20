@@ -27,7 +27,7 @@ const Form = () => {
             alert(result.message)
         }
         else{
-            result.message
+            alert(result.message)
         }
     }
     return (
